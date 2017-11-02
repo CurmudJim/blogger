@@ -1,0 +1,55 @@
+
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+body {
+  // background: url(https://www.toptal.com/designers/subtlepatterns/patterns/broken_noise.png);
+  background-color: #34495e;
+}
+
+ .jumbotron {
+   padding: 3rem;
+   background-color: #bdc3c7;
+   border-radius: 3px;
+ }
+
+ .jumbotron h1{
+   margin-top: 1px;
+   color: #2c3e50;
+ }
+
+ label {
+   color: #34495e;
+ }
+
+ .list-group-item {
+   background-color: #ecf0f1;
+   border-color: #2c3e50;
+ }
+
+ .list-group-item a {
+   color: #34495e;
+ }
+
+
+
+ // .btn-primary {
+ //   background-color: #4E4945;
+ //      border-color: #4E4945;
+ // }
+ //
+ // .btn-success {
+ //   background-color: #826D47;
+ //      border-color: #826D47;
+ // }
+ //
+ // .btn-warning {
+ //   background-color: #CC641A;
+ //      border-color: #CC641A;
+ // }
+ //
+ // .btn-warning {
+ //   background-color: #7E454A;
+ //      border-color: #7E454A;
+ // }

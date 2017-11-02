@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Show</title>
-  </head>
-  <body>
-    <h1><%= @article.title %></h1>
-    <p><%= @article.body %></p>
-    <%= link_to "<< Back to Articles List", articles_path %>
-    <%= link_to "edit", edit_article_path(@article)%>
-    <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}%>
-  </body>
-</html>
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title"><%= @article.title %></p>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= @article.body %></p>
+  </div>
+</div>
+
+  <%= render partial: 'comments/form' %>
+<div class="card">
+
+  <div class="card-header">
+    <h3>Comments (<%= @article.comments.size %>)</h3>
+  </div>
+  <%= render partial: 'articles/comment', collection: @article.comments %>
+</div>
+<br />
+<div class="btn-group" role="group" aria-label="Basic example">
+  <%= link_to "Back to Articles List", articles_path, class: "btn btn-primary" %>
+  <%= link_to "Edit", edit_article_path(@article), class: "btn btn-warning"%>
+  <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}, class: "btn btn-danger"%>
+</div>
