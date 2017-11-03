@@ -10,14 +10,17 @@
 </head>
 
 <body>
+  <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+    <%= link_to "Blogger", articles_path, class: "navbar-brand" %>
+  </nav>
+    <p class="container flash"><%= flash.notice %></p>
+    <div class="container jumbotron jumbotron-fluid">
 
-  <p class="flash"><%= flash.notice %></p>
+      <div class="container">
+              <%= yield %>
+      </div>
 
-  <div id="main-container" class="container jumbotron">
-
-    <%= yield %>
-
-  </div>
+    </div>
 
 </body>
 </html>

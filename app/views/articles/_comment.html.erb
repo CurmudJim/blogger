@@ -2,6 +2,6 @@
   <div class="card-body">
     <h4 class="card-title">Comment by <%= comment.author_name %></h4>
     <p class="card-text"><class="comment"><%= comment.body %></p>
-    <footer> Posted <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</footer>
+    <footer> Posted <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> ago</footer>
   </div>
 </div>
