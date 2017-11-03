@@ -4,7 +4,7 @@
       <% @tags.each do |tag| %>
       <li class="list-group-item">
         <%= link_to tag.name, tag_path(tag), class: 'tag_names' %>
-        <%= link_to "Delete", tag_path(@tags), method: :delete, data: {confirm: "Really delete this tag?"}, class: "btn btn-danger"%>
+
       </li>
 
       <% end %>
