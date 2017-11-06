@@ -4,7 +4,13 @@
     <h2 class="card-title"><%= @article.title %></p>
   </div>
 
-  <div class="card-body">
+  <p>
+    <% if @article.image.exists? %>
+      <%= image_tag @article.image.url(:medium) %>
+    <% end %>
+  </p>
+
+    <div class="card-body">
     <p class="card-text"><%= @article.body %></p>
 
 
