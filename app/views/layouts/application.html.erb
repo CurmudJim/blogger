@@ -15,7 +15,19 @@
     <div class="container">
       <nav class="navbar bg-light">
         <%= link_to "Blogger", articles_path, class: "navbar-brand" %>
-        <i><%= link_to "create", new_article_path, class: "material-icons new_article navbar-brand" %></i>
+        <% if logged_in? %>
+        <form class="form-inline">
+          <i><%= link_to "create", new_article_path, class: "material-icons new_article navbar-brand" %></i>
+          <%= link_to "Tags", tags_path, class: "btn" %>
+          <%= link_to "#{current_user.username}", authors_path, class: "btn" %>
+          <%= link_to "Sign out", logout_path, class: "btn" %>
+        </form>
+        <% else %>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <%= link_to "Login", login_path, class: "btn btn-success" %>
+            <%= link_to "Sign Up", new_author_path, class: "btn btn-primary" %>
+          </div>
+        <% end %>
       </nav>
       <p class="flash">
         <%= flash.notice %>

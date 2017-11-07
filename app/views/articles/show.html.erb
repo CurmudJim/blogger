@@ -34,6 +34,10 @@
 <br />
 <div class="btn-group" role="group" aria-label="Basic example">
   <%= link_to "Back to Articles List", articles_path, class: "btn btn-primary" %>
+  <% if logged_in? %>
   <%= link_to "Edit", edit_article_path(@article), class: "btn btn-warning"%>
-  <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}, class: "btn btn-danger"%>
+  <%= link_to "Delete", article_path(@article), method: :delete, data: {title: "Confirm", confirm: "Are you sure?"}, class: "btn btn-danger" %>
+<% end %>
+
+
 </div>
