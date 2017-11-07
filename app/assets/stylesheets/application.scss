@@ -15,6 +15,7 @@ body {
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
+  background-color: #ecf0f1;
 }
 
 .navbar-brand {
@@ -22,7 +23,7 @@ body {
 }
 
 .navbar-brand:hover {
-  color: #bdc3c7;
+  color: #7f8c8d;
 }
 
  .main {
@@ -55,26 +56,59 @@ body {
    text-align: center;
  }
 
+.btn {
+  color: #041628;
+  border-radius: 0px;
+}
+
+.btn-light {
+  background-color: transparent;
+  border-color: transparent;
+}
 
 
- //
- //
- // .btn-primary:hover {
- //   background-color: #4E4945;
- //      border-color: #4E4945;
- // }
- //
- // .btn-success {
- //   background-color: #826D47;
- //      border-color: #826D47;
- // }
- //
- // .btn-warning {
- //   background-color: #CC641A;
- //      border-color: #CC641A;
- // }
- //
- // .btn-warning {
- //   background-color: #7E454A;
- //      border-color: #7E454A;
- // }
+.btn-light:hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #7f8c8d;
+}
+
+ .btn-primary {
+   background-color: #96afc8;
+      border-color: transparent;
+ }
+
+ .btn-primary:hover {
+   background-color: #2980b9;
+      border-color: transparent;
+ }
+
+ .btn-success {
+   background-color: #96c8af;
+      border-color: transparent;
+ }
+
+ .btn-success:hover {
+   background-color: #27ae60;
+      border-color: transparent;
+ }
+
+ .btn-warning {
+   background-color: #fac864;
+      border-color: transparent;
+ }
+
+ .btn-warning:hover {
+   background-color: #f39c12;
+      border-color: transparent;
+ }
+
+ .btn-danger {
+   background-color: #fa6464;
+      border-color: transparent;
+ }
+
+ .btn-danger:hover {
+   background-color: #c0392b;
+      border-color: transparent;
+ }

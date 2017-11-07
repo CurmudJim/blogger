@@ -13,14 +13,14 @@
 
   <body>
     <div class="container">
-      <nav class="navbar bg-light">
+      <nav class="navbar">
         <%= link_to "Blogger", articles_path, class: "navbar-brand" %>
         <% if logged_in? %>
         <form class="form-inline">
           <i><%= link_to "create", new_article_path, class: "material-icons new_article navbar-brand" %></i>
-          <%= link_to "Tags", tags_path, class: "btn" %>
-          <%= link_to "#{current_user.username}", authors_path, class: "btn" %>
-          <%= link_to "Sign out", logout_path, class: "btn" %>
+          <%= link_to "Tags", tags_path, class: "btn btn-light" %>
+          <%= link_to "#{current_user.username}", authors_path, class: "btn btn-light" %>
+          <%= link_to "Sign out", logout_path, class: "btn btn-light" %>
         </form>
         <% else %>
           <div class="btn-group" role="group" aria-label="Basic example">
